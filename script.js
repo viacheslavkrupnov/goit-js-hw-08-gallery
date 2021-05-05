@@ -40,6 +40,8 @@ function modalOpen(event) {
 
 function modalClose(event) {
     modal.classList.remove("is-open");
+    modalImg.src = '';
+    modalImg.alt = '';
     overlay.removeEventListener("click", modalCloseByOverlayClick);
     document.removeEventListener("keydown", modalCloseByEsc);
     modalBtnClose.removeEventListener('click', modalClose);
